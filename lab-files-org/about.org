@@ -1,8 +1,0 @@
-#+begin_export html
----
-layout: base
-title: About
----
-#+end_export
-#+title: About this "Blog"
-This is a place where I write up math things hurray.
