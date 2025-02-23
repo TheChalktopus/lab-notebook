@@ -1,1 +1,0 @@
-Repository for my personal blog at https://peterroelants.github.io/

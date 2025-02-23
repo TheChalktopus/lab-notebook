@@ -1,106 +1,76 @@
-# Use GitHub pages Jekyll configuration
-# Launch GitHub pages Jekyll with:
-# bundle exec jekyll serve
+title: Attempting to Learn Math
+author:
+  name: Abby Kinney
+  email: abbykinney17@gmail.com
 
-# General blog information
-############################################################
-# Name of your blog (this will show up at the top of your page and in the RSS feed)
-title: Abby's FrAg Notebook
-name: Abby's FrAg Notebook
-# Short description (goes below the title; it will also be used in the RSS feed)
-description: Lab Notebook
-# Your name, as you want it to appear underneath each post and in the footer
-author: Abby Kinney
-# Your email if you want it to be linked on the contact page
-author_email: akinney@uchicago.edu
-email: akinney@uchicago.edu
-# The URL of your actual domain. This will be used to make absolute links in the RSS feed.
-url: https://thechalktopus.github.io/lab-notebook
-github_username:  TheChalktopus
+# The `>` after `description:` means to ignore line-breaks until next key.
+# If you want to omit the line-break after the end of text, use `>-` instead.
+description: >
+  This is a site where I write about the math I have learned.
 
-# Where things are
-############################################################
-source: . # Set by GitHub
-# This is where the generated site will be placed once Jekyll is done transforming it.
-destination: ./_site
-#plugins_dir: ./_plugins
-# This folder is for the main templates your content will be inserted into. You can have different layouts for different pages or page sections.
-layouts_dir: ./_layouts
-data_dir: ./_data
-collections: null
 
-# Handling Reading
-############################################################
-# Safe: Disable custom plugins, and ignore symbolic links.
-safe: true # Set by GitHub
-include: [".htaccess"]
-exclude:
-  - notebooks
-  - build_info
-keep_files:
-  - ".git"
-  - ".svn"
-encoding: "utf-8"
-markdown_ext: "markdown,mkdown,mkdn,mkd,md"
 
-# Filtering Content
-############################################################
-show_drafts: null
-limit_posts: 0
-future: true
-unpublished: false
+# Build settings
 
-# Plugins
-############################################################
-whitelist: []
+# If you clone the Minima repo and build locally, use this setting.
+theme: minima
+
+# As of November 2023, GitHub Pages still uses Minima 2.5.1 (https://pages.github.com/versions/). 
+# If you want to use the latest Minima version on GitHub Pages, use the following setting and 
+# add a line comment on "theme: minima" above.
+#remote_theme: jekyll/minima
+
 plugins:
-  - github-pages
-  - jekyll-sitemap
-  - jekyll-redirect-from
+  - jekyll-feed
+  - jekyll-seo-tag
 
-# Conversion
-############################################################
-markdown: kramdown
-mathjax: true
-highlighter: rouge
-# LSI: produce an index for related posts.
-lsi: false # Set by GitHub
-excerpt_separator: "\n\n"
+# Theme-specific settings
 
-kramdown:
-  auto_ids: true
-  footnote_nr: 1
-  entity_output: as_char
-  toc_levels: 1..6
-  smart_quotes: lsquo,rsquo,ldquo,rdquo
-  syntax_highlighter: rouge
-  math_engine: mathjax
+# If you want to link only specific pages in your header, use this and add the path to the pages
+# in order as they should show up.
+header_pages:
+  - posts.html
+  - courses.html
+  - about.html
+
+# Set to `true` to show excerpts on the homepage.
+#show_excerpts: false
+
+# Minima specific settings, which are only available from Minima 3.0 onward.
+minima:
+  # Minima skin selection.
+  # Available skins are:
+  # classic	           Default, light color scheme.
+  # dark	             Dark variant of the classic skin.
+  # auto	             Adaptive skin based on the default classic and dark skins.
+  # solarized-light	   Light variant of solarized color scheme.
+  # solarized-dark	   Dark variant of solarized color scheme.
+  # solarized	         Adaptive skin for solarized color scheme skins.
+  skin: classic
+  
+  # Minima date format.
+  # The default value is "%b %d, %Y" (e.g. Nov 14, 2023) 
+  # Refer to https://shopify.github.io/liquid/filters/date/ if you want to customize this.
+  #date_format: "%b-%d-%Y"
+
+  # Generate social links in footer.
+  #social_links:
+  #  - { platform: devto,          user_url: "https://dev.to/jekyll" }
+  #  - { platform: dribbble,       user_url: "https://dribbble.com/jekyll" }
+  #  - { platform: facebook,       user_url: "https://www.facebook.com/jekyll" }
+  #  - { platform: flickr,         user_url: "https://www.flickr.com/photos/jekyll" }
+  #  - { platform: github,         user_url: "https://github.com/jekyll/minima" }
+  #  - { platform: gitlab,         user_url: "https://gitlab.com/jekyll" }
+  #  - { platform: google_scholar, user_url: "https://scholar.google.com/citations?user=qc6CJjYAAAAJ" }
+  #  - { platform: instagram,      user_url: "https://www.instagram.com/jekyll" }
+  #  - { platform: keybase,        user_url: "https://keybase.io/jekyll" }
+  #  - { platform: linkedin,       user_url: "https://www.linkedin.com/in/jekyll" }
+  #  - { platform: microdotblog,   user_url: "https://micro.blog/jekyll" }
+  #  - { platform: pinterest,      user_url: "https://www.pinterest.com/jekyll" }
+  #  - { platform: stackoverflow,  user_url: "https://stackoverflow.com/users/1234567/jekyll" }
+  #  - { platform: telegram,       user_url: "https://t.me/jekyll" }
+  #  - { platform: twitter,        user_url: "https://twitter.com/jekyllrb" }
+  #  - { platform: x,              user_url: "https://x.com/jekyllrb" }
+  #  - { platform: youtube,        user_url: "https://www.youtube.com/jekyll" }
 
 
-# Serving
-############################################################
-detach: false
-port: 4000
-host: 127.0.0.1
-# Uncomment if you are planning to run the blog in a subdirectory
-# Note - if you enable this, and attempt to view your site locally you have to use the baseurl in your local path.
-# Serve the website from the given base URL
-# Example, you must use http://localhost:4000/path/to/blog
-baseurl: /docs
-#baseurl: "" # does not include hostname
-
-
-# Outputting
-############################################################
-permalink: /posts/:title/
-paginate_path: /page:num
-# Set the time zone for site generation.
-timezone: United States/Chicago
-
-quiet: false
-defaults: []
-
-
-# Analytics
-############################################################
-#google_analytics: G-Y5KLC5JQW6
