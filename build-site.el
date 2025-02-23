@@ -27,9 +27,9 @@
       (list
        (list "org-site:main"
              :recursive t
-             :base-directory "~/Sites/math-site-orgs/"
+             :base-directory "~/Sites/lab-notebook/lab-files-orgs/"
              :publishing-function 'org-html-publish-to-html
-             :publishing-directory "~/Sites/math-site/"
+             :publishing-directory "~/Sites/lab-notebook/docs/"
 	     :body-only t
 	     :with-toc nil)           
        ))
