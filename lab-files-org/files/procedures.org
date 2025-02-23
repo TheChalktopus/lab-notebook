@@ -1,0 +1,6 @@
+#+TITLE: Procedures in the lab
+#+startup: OVERVIEW
+* Cleaning parts that come from the machine shop with tap
+* Waterjet 1 Rack Unit Part
+* Purchasing
+* Documentation
