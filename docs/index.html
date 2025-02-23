@@ -3,12 +3,11 @@ layout: default
 title: Home
 ---
 
-<ul class="posts">
+<ul class="projects">
 {% for post in site.posts limit: 5 %}
-  <div class="post_info">
+  <div class="project_info">
     <li>
 	    <a href={{ site.url }}{{ site.baseurl }}{{ post.url }}>{{ post.title }}</a>
-	    <span>({{ post.date | date:"%Y-%m-%d" }})</span>
     </li>
     </br> <em>{{ post.excerpt }} </em>
     </div>
