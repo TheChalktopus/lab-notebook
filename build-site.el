@@ -43,7 +43,7 @@
 (setq org-todo-keywords
       '((sequence "TODO(t)" "INPROG(i)" "NEXT(n)" "|" "DONE(d)" "CANCELLED(x)" )
 	(sequence  "CONSUME(c)" "|")
-	)
+	))
 (setq org-agenda-sorting-strategy
       '(
 	(agenda habit-down time-up priority-up category-keep)
