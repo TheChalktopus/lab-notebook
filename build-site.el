@@ -27,7 +27,7 @@
       (list
        (list "org-site:main"
              :recursive t
-             :base-directory "~/Sites/lab-notebook/lab-files-orgs/"
+             :base-directory "~/Sites/lab-notebook/lab-files-org/"
              :publishing-function 'org-html-publish-to-html
              :publishing-directory "~/Sites/lab-notebook/docs/"
 	     :body-only t
