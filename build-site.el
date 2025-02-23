@@ -37,7 +37,29 @@
 ;; Generate the site output
 (org-store-agenda-views)
 (org-publish-all t)
-
+(add-to-list 'org-agenda-files "~/orgs/" )
+(add-to-list 'org-agenda-files "~/lab-files/lab-journal/")
+(add-to-list 'org-agenda-files "~/roam/lab-files-org/")
+(setq org-todo-keywords
+      '((sequence "TODO(t)" "INPROG(i)" "NEXT(n)" "|" "DONE(d)" "CANCELLED(x)" )
+	(sequence  "CONSUME(c)" "|")
+	)
+(setq org-agenda-sorting-strategy
+      '(
+	(agenda habit-down time-up priority-up category-keep)
+	(todo priority-down category-keep tag-up)
+	(tags priority-down category-keep)
+	(tags-todo priority-down category-keep)
+	(search priority-up category-keep)
+	)
+      )
+(setq org-agenda-custom-commands
+	  '(("d" "Lab Tasks"
+         (
+          (tags-todo "lab"  ((org-agenda-sorting-strategy '(priority-down)))))
+         nil
+         ("~/roam/lab-files-org/todo.org")))
+	  )
 
 
 
