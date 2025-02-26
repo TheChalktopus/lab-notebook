@@ -37,6 +37,7 @@
 ;; Generate the site output
 (org-store-agenda-views)
 (org-publish-all t)
+(add-to-list 'org-agenda-files "~/orgs/obligations.org" )
 (add-to-list 'org-agenda-files "~/orgs/" )
 (add-to-list 'org-agenda-files "~/lab-files/lab-journal/")
 (add-to-list 'org-agenda-files "~/roam/lab-files-org/")
