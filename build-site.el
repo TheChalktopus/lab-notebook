@@ -62,7 +62,6 @@
        ))
 (setq org-export-with-section-numbers nil)
 ;; Generate the site output
-
 (org-publish-all t)
 
 
