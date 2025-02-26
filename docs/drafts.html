@@ -1,0 +1,15 @@
+---
+layout: default
+title: Documentation in progress
+---
+
+<ul class="_drafts">
+{% for post in site.drafts %}
+  <div class="post_info">
+    <li>
+	    <a href={{ site.url }}{{ site.baseurl }}{{ post.url }}>{{ post.title }}</a>
+	    <span>({{ post.date | date:"%Y-%m-%d" }})</span>
+    </li>
+    </div>
+  {% endfor %}
+</ul>
