@@ -4,12 +4,11 @@ title: Home
 ---
 
 <ul class="projects">
-{% for post in site.posts limit: 5 %}
+{% for post in site.projects limit: 5 %}
   <div class="project_info">
     <li>
 	    <a href={{ site.url }}{{ site.baseurl }}{{ post.url }}>{{ post.title }}</a>
     </li>
-    </br> <em>{{ post.excerpt }} </em>
     </div>
   {% endfor %}
 </ul>
