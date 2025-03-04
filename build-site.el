@@ -38,11 +38,10 @@
 	  '(("d" "Lab Tasks"
          (
           (tags-todo "lab"  ((org-agenda-sorting-strategy '(priority-down)))))
-         nil
+         ((org-agenda-remove-tags t))
          ("~/roam/lab-files-org/todo.org")))
 	  )
-(org-store-agenda-views)
-
+(org-batch-store-agenda-views)
 ;; Customize the HTML output
 ;(setq org-html-validation-link nil            ;; Don't show validation link
 ;      org-html-head-include-scripts nil       ;; Use our own scripts

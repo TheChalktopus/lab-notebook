@@ -1,0 +1,25 @@
+---
+layout: default
+title: Entry for 2025-03-03
+tags: [fiber EOM]
+---
+<div id="outline-container-org313a251" class="outline-2">
+<h2 id="org313a251">Fiber EOM Testing</h2>
+<div class="outline-text-2" id="text-org313a251">
+<p>
+\[16 dbm = 10*Log10[Vpp^2/2.82^2/50] + 30\]
+\[Vpp \approx 4 \text{V}\]
+Using, \(\Beta = V_\text{pp}/(2 V_\pi)\), we find \(\Beta \approx 0.42\), which conveniently gives a ratio peaks of
+\[BesselJ[1,beta]^2/(BesselJ[0, beta]^2 + 2*BesselJ[1, beta]^2) = 0.042\]
+</p>
+
+<p>
+On the scope we actually find a ratio of \(0.026\).
+</p>
+
+<p>
+Repeating this calculation for 14 dBm, we find \(\Beta = 0.34\), which gives a ratio
+\[BesselJ[1,beta]^2/(BesselJ[0, beta]^2 + 2*BesselJ[1, beta]^2) = 0.028\]
+</p>
+</div>
+</div>
