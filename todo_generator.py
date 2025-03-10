@@ -20,7 +20,7 @@ f.close()
 
 todo_filename = './docs/todo.md'
 f = open(todo_filename, 'a')
-write_str = '---\nlayout: tagpage\ntitle: Tasks \ntag: [tasks]' + tag + '\nrobots: noindex\n---\n\n\n'
+write_str = '---\nlayout: tagpage\ntitle: Tasks \ntag: [tasks]\nrobots: noindex\n---\n\n\n'
 for line in todos :
     write_str.append(line+"\n")
 f.write(write_str)
