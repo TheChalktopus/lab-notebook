@@ -41,6 +41,35 @@
          ((org-agenda-remove-tags t))
          ("~/roam/lab-files-org/todo.org")))
 	  )
+(defun my-org-agenda-preserve-first-n-lines (n)
+  "Overwrite an Org agenda file while preserving the first N lines."
+  (let ((output-file "~/roam/lab-files-org/todo.org")  ;; Change this to your desired file
+        preserved-lines)
+
+    ;; Read and store the first N lines
+    (when (file-exists-p output-file)
+      (with-temp-buffer
+        (insert-file-contents output-file)
+        (goto-char (point-min))
+        (dotimes (_ n)
+          (when (not (eobp)) ;; Stop if the file has fewer than N lines
+            (push (buffer-substring-no-properties (line-beginning-position) (line-end-position)) preserved-lines)
+            (forward-line 1)))))
+
+    ;; Write the preserved lines and new agenda content
+    (with-temp-file output-file
+      ;; Insert preserved lines first
+      (dolist (line (reverse preserved-lines))
+        (insert line "\n"))
+      (insert "\n") ;; Separate preserved lines from the agenda
+      ;; Insert the new agenda content
+      (org-agenda-write (buffer-name))))
+
+  (message "Agenda written to %s, preserving the first %d lines." output-file n))
+
+;; Example: Preserve the first 5 lines
+(my-org-agenda-preserve-first-n-lines 5)
+
 (org-store-agenda-views)
 ;; Customize the HTML output
 ;(setq org-html-validation-link nil            ;; Don't show validation link
