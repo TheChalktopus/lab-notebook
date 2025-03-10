@@ -25,4 +25,3 @@ for line in todos :
     write_str += line+"\n"
 f.write(write_str)
 f.close()
-print("", total_tags.__len__())
