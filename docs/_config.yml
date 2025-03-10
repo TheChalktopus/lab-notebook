@@ -21,6 +21,9 @@ collections:
   projects:
     output: true
     permalink: /projects/:path/
+  tags:
+    output: true
+    permalink: /tags/:path/
 
 # As of November 2023, GitHub Pages still uses Minima 2.5.1 (https://pages.github.com/versions/). 
 # If you want to use the latest Minima version on GitHub Pages, use the following setting and 
@@ -39,6 +42,7 @@ header_pages:
   - notebook.html
   - todo.html
   - drafts.html
+  - tags.html
 
 # Set to `true` to show excerpts on the homepage.
 #show_excerpts: false
