@@ -44,6 +44,8 @@ header_pages:
   - tags.html
   - drafts.html
 
+include: ["assets"]
+
 # Set to `true` to show excerpts on the homepage.
 #show_excerpts: false
 

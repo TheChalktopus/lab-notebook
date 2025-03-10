@@ -18,6 +18,7 @@
 
 
 
+
 (add-to-list 'org-agenda-files "~/orgs/obligations.org")
 (add-to-list 'org-agenda-files "~/lab-files/lab-journal/")
 (add-to-list 'org-agenda-files "~/roam/lab-files-org/_posts/")
@@ -50,6 +51,7 @@
 ;      org-html-head "<link rel=\"stylesheet\" href=\"https://cdn.simplecss.org/simple.min.css\" />")
 
 ;; Define the publishing project
+(setq org-html-inline-images t)
 (setq org-publish-project-alist
       (list
        (list "org-site:main"
