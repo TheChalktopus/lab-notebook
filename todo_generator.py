@@ -15,7 +15,6 @@ todo_html_filename = './docs/todo.html'
 f = open(todo_html_filename, 'r')
 todos = [line for line in f]
 f.close()
-os.remove(todo_filename)
 try :
     os.remove(todo_html_filename)
 except:
