@@ -1,6 +1,6 @@
 ---
 layout: tagpage
-title: "Tag: fiber-eom"
-tag: fiber-eom
+title: "Tag: mot"
+tag: mot
 robots: noindex
 ---

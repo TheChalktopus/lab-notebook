@@ -1,6 +1,6 @@
 ---
 layout: tagpage
-title: "Tag: rb-mot"
-tag: rb-mot
+title: "Tag: rb"
+tag: rb
 robots: noindex
 ---
