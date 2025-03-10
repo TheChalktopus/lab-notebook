@@ -15,7 +15,7 @@ import os
 
 post_dir = '~/roam/lab-notebook/_posts/'
 projects_dir = '~/roam/lab-notebook/_projects/'
-tag_dir = '/docs/_tags/'
+tag_dir = './docs/_tags/'
 
 filenames = glob.glob(post_dir + '*org')
 filenames = filenames + glob.glob(projects_dir + '*org')
