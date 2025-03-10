@@ -21,6 +21,7 @@ filenames = glob.glob(post_dir + '*org')
 filenames = filenames + glob.glob(projects_dir + '*org')
 
 total_tags = []
+print(filenames)
 for filename in filenames:
     f = open(filename, 'r')
     crawl = False
