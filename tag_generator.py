@@ -49,7 +49,7 @@ for filename in filenames:
     f.close()
 total_tags = set(total_tags)
 
-old_tags = glob.glob(tag_dir + '*.org')
+old_tags = glob.glob(tag_dir + '*.md')
 for tag in old_tags:
     os.remove(tag)
     
