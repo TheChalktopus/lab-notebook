@@ -40,7 +40,7 @@ plugins:
 # in order as they should show up.
 header_pages:
   - notebook.html
-  - todo.html
+  - todo.md
   - tags.html
   - drafts.html
 
