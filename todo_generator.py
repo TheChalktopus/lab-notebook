@@ -13,7 +13,7 @@ import os
 projects_dir = '/Users/ak/roam/lab-files-org/_projects/'
 tag_dir = './docs/_tags/'
 
-filename = glob.glob('/Users/ak/roam/lab-files-org/todo.org')
+filename = '/Users/ak/roam/lab-files-org/todo.org'
 f = open(filename, 'r')
 todos = [line for line in f]
 f.close()
