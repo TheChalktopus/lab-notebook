@@ -2,10 +2,12 @@
 layout: default
 title: Home
 ---
-
-<ul class="projects">
-{% for post in site.projects limit: 5 %}
-  <div class="project_info">
+<div id="outline-container-org15e4f7a" class="outline-2">
+<h2 id="org15e4f7a">Recent Notes</h2>
+<div class="outline-text-2" id="text-org15e4f7a">
+<ul class="posts">
+{% for post in site.posts limit: 5 %}
+  <div class="post_info">
     <li>
 	    <a href={{ site.url }}{{ site.baseurl }}{{ post.url }}>{{ post.title }}</a>
     </li>
@@ -13,3 +15,5 @@ title: Home
     </div>
   {% endfor %}
 </ul>
+</div>
+</div>
