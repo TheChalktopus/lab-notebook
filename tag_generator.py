@@ -13,8 +13,8 @@ No plugins required.
 import glob
 import os
 
-post_dir = '~/roam/lab-files-org/_posts/'
-projects_dir = '~/roam/lab-files-org/_projects/'
+post_dir = '/Users/ak/roam/lab-files-org/_posts/'
+projects_dir = '/Users/ak/roam/lab-files-org/_projects/'
 tag_dir = './docs/_tags/'
 
 filenames = glob.glob(post_dir + '*org')
