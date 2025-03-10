@@ -21,16 +21,13 @@ tag_dir = './docs/_tags/'
 filenames = glob.glob(post_dir + '*org')
 filenames = filenames + glob.glob(projects_dir + '*org')
 total_tags = []
-print(filenames)
 for filename in filenames:
     f = open(filename, 'r')
     crawl = False
     for line in f:
-        print(line)
         if crawl:
             current_tags = line.strip().split(':') 
             if current_tags[0] == 'tags':
-                print("tags found")
                 if (current_tags[1].strip().startswith('[')):
                     clean_tag = ''.join(c for c in current_tags[1] if c not in '[]')
                     list_tags = map(str.strip, clean_tag.split(','))
