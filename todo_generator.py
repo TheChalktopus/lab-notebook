@@ -19,7 +19,7 @@ try :
     os.remove(todo_html_filename)
 except:
     pass
-f = open(todo_filename, 'a')
+f = open(todo_html_filename, 'a')
 write_str = '---\nlayout: tagpage\ntitle: Tasks \ntag: [tasks]\nrobots: noindex\n---\n\n\n'
 for line in todos :
     write_str += line+"\n"
