@@ -6,7 +6,7 @@ author:
 # The `>` after `description:` means to ignore line-breaks until next key.
 # If you want to omit the line-break after the end of text, use `>-` instead.
 description: >
-  Github repo: [](https://github.com/TheChalktopus/lab-notebook)
+   Abby's Lab Notebook
 
 
 
@@ -40,7 +40,7 @@ plugins:
 # in order as they should show up.
 header_pages:
   - notebook.html
-  - todo.md
+  - todo.html
   - tags.html
   - drafts.html
 

@@ -10,16 +10,11 @@ Contact: lqian8@jhu.edu
 import glob
 import os
 
-projects_dir = '/Users/ak/roam/lab-files-org/_projects/'
-tag_dir = './docs/_tags/'
 
-filename = '/Users/ak/roam/lab-files-org/todo.org'
-f = open(filename, 'r')
+todo_html_filename = './docs/todo.html'
+f = open(todo_html_filename, 'r')
 todos = [line for line in f]
 f.close()
-
-todo_filename = './docs/todo.md'
-todo_html_filename = './docs/todo.html'
 os.remove(todo_filename)
 try :
     os.remove(todo_html_filename)
