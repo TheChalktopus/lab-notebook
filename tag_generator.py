@@ -60,3 +60,4 @@ for tag in total_tags:
     f.write(write_str)
     f.close()
 print("Tags generated, count", total_tags.__len__())
+exit()
