@@ -41,8 +41,8 @@ plugins:
 header_pages:
   - notebook.html
   - todo.html
-  - drafts.html
   - tags.html
+  - drafts.html
 
 # Set to `true` to show excerpts on the homepage.
 #show_excerpts: false
