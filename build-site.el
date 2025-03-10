@@ -16,9 +16,9 @@
 ;; Load the publishing system
 (require 'ox-publish)
 
-
-(add-to-list 'org-agenda-files "~/orgs/obligations.org" )
-(add-to-list 'org-agenda-files "~/orgs/" )
+(setq 'org-agenda-files '())
+(add-to-list 'org-agenda-files "~/orgs/obligations.org")
+(add-to-list 'org-agenda-files " ~/orgs/" )
 (add-to-list 'org-agenda-files "~/lab-files/lab-journal/")
 (add-to-list 'org-agenda-files "~/roam/lab-files-org/")
 (setq org-todo-keywords
