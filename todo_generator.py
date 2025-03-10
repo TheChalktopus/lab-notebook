@@ -20,7 +20,7 @@ try :
 except:
     pass
 f = open(todo_html_filename, 'a')
-write_str = '---\nlayout: tagpage\ntitle: Tasks \ntag: [tasks]\nrobots: noindex\n---\n\n\n'
+write_str = '---\nlayout: default\ntitle: Tasks \ntag: [tasks]\nrobots: noindex\n---\n\n\n'
 for line in todos :
     write_str += line+"\n"
 f.write(write_str)
