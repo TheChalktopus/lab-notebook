@@ -25,7 +25,6 @@
 (add-to-list 'org-agenda-files "~/roam/lab-files-org/_projects/")
 (setq org-todo-keywords
       '((sequence "TODO(t)" "INPROG(i)" "NEXT(n)" "|" "DONE(d)" "CANCELLED(x)" )
-	(sequence  "CONSUME(c)" "|")
 	))
 (setq org-agenda-sorting-strategy
       '(
