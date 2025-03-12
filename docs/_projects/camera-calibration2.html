@@ -1,0 +1,111 @@
+<p>
+&#x2014;
+layout: default
+title: Camera Calibration calculations
+tags: [imaging]
+&#x2014;
+</p>
+<div class="org-src-container">
+<pre class="src src-mathematica">
+
+
+Mathematica 13.1.0 Kernel for Mac OS X ARM (64-bit)
+Copyright 1988-2022 Wolfram Research, Inc.
+
+In[1]:=                                                                                                           img1 = {191, 383, 591, 788, 973}
+}
+
+Out[1]= {191, 383, 591, 788, 973}
+
+In[2]:=                                                                                                           img2 = {191, 383, 591, 783, 985}
+}
+
+Out[2]= {191, 383, 591, 783, 985}
+
+In[3]:=                                                                                                           img3 = {181, 388, 591, 776, 980}
+}
+
+Out[3]= {181, 388, 591, 776, 980}
+
+In[4]:=                                                                                                           img4 = {180, 388, 581, 776, 978}
+}
+
+Out[4]= {180, 388, 581, 776, 978}
+
+In[5]:=                                                                                                           img5
+5
+
+Out[5]= img5
+
+In[6]:=                                                                                                           img5 = {186, 390, 586, 783, 985}
+}
+
+Out[6]= {186, 390, 586, 783, 985}
+
+In[7]:=                                                                                                           img6 = {191, 381, 591, 774, 978}
+}
+
+Out[7]= {191, 381, 591, 774, 978}
+
+In[8]:=                                                                                                           img7 = {181, 383, 581, 776, 980}
+}
+
+Out[8]= {181, 383, 581, 776, 980}
+
+In[9]:=                                                                                                           img8 = {191, 383, 581, 781, 973}
+}
+
+Out[9]= {191, 383, 581, 781, 973}
+
+In[10]:=                                                                                                          img9 = {181, 388, 593, 783, 973}
+}
+
+Out[10]= {181, 388, 593, 783, 973}
+
+In[11]:=                                                                                                          img10={186,383,581, 788, 985}
+}
+
+Out[11]= {186, 383, 581, 788, 985}
+
+In[12]:=                                                                                                          imgSum = img1+img2+img3+img4+img5+img6+img7+img8+img9+img10
+0
+
+Out[12]= {1859, 3850, 5867, 7808, 9790}
+
+In[13]:=                                                                                                          imgSum/10
+0
+
+          1859       5867  3904
+Out[13]= {----, 385, ----, ----, 979}
+           10         10    5
+
+In[14]:=                                                                                                          imgSum[[1]]
+]
+
+Out[14]= 1859
+
+In[15]:=                                                                                                          imgSumdata = Table[{i, imgSum[[i]]},{i, 1, Length[imgSum]}]
+]
+
+Out[15]= {{1, 1859}, {2, 3850}, {3, 5867}, {4, 7808}, {5, 9790}}
+
+In[16]:=                                                                                                          fit = NonlinearModelFit[imgSumdata, {m x + b}, x]
+]
+
+NonlinearModelFit::argrx: NonlinearModelFit called with 3 arguments; 4 arguments are expected.
+
+Out[16]= NonlinearModelFit[{{1, 1859}, {2, 3850}, {3, 5867}, {4, 7808}, {5, 9790}}, {b + m x}, x]
+
+In[17]:=                                                                                                          fit = NonlinearModelFit[imgSumdata, m x + b, {m, b}, x]
+]
+
+Out[17]= FittedModel[Panel[-111.2 + 1982. x, FrameMargins -&gt; 5]]
+
+In[18]:=1000/198.2
+2
+
+Out[18]= 5.04541
+
+In[19]:=                                                                                                          
+</pre>
+</div>
