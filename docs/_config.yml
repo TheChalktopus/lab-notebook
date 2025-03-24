@@ -5,7 +5,7 @@ author:
 
 # The `>` after `description:` means to ignore line-breaks until next key.
 # If you want to omit the line-break after the end of text, use `>-` instead.
-description: >
+description: >-
    Abby's Lab Notebook
 
 # Build settings
@@ -42,7 +42,7 @@ header_pages:
   - tags.html
   - drafts.html
 
-include: ["assets"]
+#include: ["assets"]
 
 # Set to `true` to show excerpts on the homepage.
 #show_excerpts: false
