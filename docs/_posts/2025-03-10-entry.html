@@ -1,0 +1,55 @@
+---
+layout: default
+title: Entry for 2025-03-10
+tags: [rb, mot, imaging]
+---
+<div id="outline-container-org17b08c3" class="outline-2">
+<h2 id="org17b08c3">More MOT troubleshooting</h2>
+<div class="outline-text-2" id="text-org17b08c3">
+<p>
+<a href="2025-03-08-entry.html">Previous MOT troubleshooting</a>
+With these good settings for PMT  waiting about 30 mintues at with dispenser at 6-6.5 A. PMT signal increases from 100 mV to 600 mV. You can see it on the camera but it beam is less well defined. Turning repump on and off changes signal by ~180 mV.
+</p>
+
+<p>
+With these good settings for the camera (meaning higher dbm for aom but smaller beam size), turning on and off the repump changes the mean counts by ~150 (exposure time 300 ms). Blocking and unblocking the retro leads to an increase in scattered light more than it does increase the atomic signal.
+</p>
+
+<p>
+Realigned retro
+unblocked retro: signal mean on camera 2800 - 2200 = 600
+Blocked retro: signal mean on camera 2550-2100 = 450
+So we do see a difference
+</p>
+
+
+<p>
+MOT!
+Increased repump power and moved around camera. Confirmed by seeing that B field on/off makes mot got away but not all the scattered light (maybe changes some of the other fluorescence though cause Zeeman something something? I'm not sure ask about this later.)
+Not in focus though because pixel size (remember we are binning, 4 pixels) and magnification calculation give us a MOT much larger than actually can have)
+</p>
+
+<p>
+Better MOT image got 800 pixels wide without binning so 2 mm MOT? Perhaps on the large side but not crazy big. Should try to get better focus by modifying the imaging system.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org982311a" class="outline-2">
+<h2 id="org982311a">MOT imaging system</h2>
+<div class="outline-text-2" id="text-org982311a">
+<p>
+4f imaging system
+<img src="https://thechalktopus.github.io/lab-notebook/assets/4fimagingsystem.png" alt="4fimagingsystem.png" />
+</p>
+</div>
+
+<div id="outline-container-org06cddb0" class="outline-3">
+<h3 id="org06cddb0">PMT for fluorescence</h3>
+<div class="outline-text-3" id="text-org06cddb0">
+<p>
+To cut down on scattered light switch to a two lens system add an iris and cut out anything that is not the focus.
+</p>
+</div>
+</div>
+</div>

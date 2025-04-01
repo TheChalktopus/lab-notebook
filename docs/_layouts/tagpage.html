@@ -1,0 +1,36 @@
+---
+layout: default
+---
+
+
+<h1>Tag: {{ page.tag }}</h1>
+<div class="post">
+<div>
+{% for post in site.posts %}
+  {%comment%}
+    According to documentation, arrays should be filterable
+    with `where_exp`, but I couldn't get it to work.
+    {%endcomment%}
+  {% if post.tags contains page.tag %}
+    <div class="post-listing">
+      <a href="{{ site.baseurl }}{{ post.url }}">{{post.title}}</a>
+    </div>
+  {% endif %}
+{% endfor %}
+</div>
+<div class="_projects">
+<div>
+{% for post in site.projects %}
+  {%comment%}
+    According to documentation, arrays should be filterable
+    with `where_exp`, but I couldn't get it to work.
+    {%endcomment%}
+  {% if post.tags contains page.tag %}
+    <div class="post-listing">
+      <a href="{{ site.baseurl }}{{ post.url }}">{{post.title}}</a>
+    </div>
+  {% endif %}
+{% endfor %}
+</div>
+
+</div>

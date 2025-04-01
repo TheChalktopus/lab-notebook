@@ -1,0 +1,43 @@
+---
+layout: default
+title: Entry for 2025-03-03
+tags: [eom]
+---
+<div id="outline-container-orgc93325a" class="outline-2">
+<h2 id="orgc93325a">Fiber EOM Testing</h2>
+<div class="outline-text-2" id="text-orgc93325a">
+</div>
+<div id="outline-container-orgc0c8481" class="outline-3">
+<h3 id="orgc0c8481">Sideband</h3>
+<div class="outline-text-3" id="text-orgc0c8481">
+<p>
+\[16 \text{dBm} = 10\log_{10}{\left(\frac{(V_\text{pp}/(2\sqrt{2}))^2}{50}\right)} + 30\]
+\[V_\text{pp} \approx 4 \text{V}\]
+Using, \(\beta = V_\text{pp}/(2 V_\pi)\), we find \(\beta \approx 0.42\), which conveniently gives a ratio peaks of
+\[\frac{J_1(\beta)^2}{J_0(\beta)^2 + 2J_1(\beta)^2} = 0.042\]
+</p>
+
+<p>
+On the scope we actually, find a ratio of \(0.026\).
+</p>
+
+<p>
+Making the reasonable assumption that we have around 2 dBm of loss, then we can repeat this calculation for 14 dBm and we expect it to be closer to what we actually measure. We find \(\beta = 0.34\), which gives a ratio \(0.028\).
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-orgfc9690a" class="outline-3">
+<h3 id="orgfc9690a">Power through EOM</h3>
+<div class="outline-text-3" id="text-orgfc9690a">
+<p>
+We're sending 14 mW to EOM, getting 80 \(\mu \text{W}\) out.
+</p>
+
+<p>
+Looking at the FP peaks, they do seem to vary in peak height over time quite a bit. However, due to how little power we're getting through the EOM, I'm not sure if that is due to power fluctuations in the laser itself.
+</p>
+</div>
+</div>
+</div>

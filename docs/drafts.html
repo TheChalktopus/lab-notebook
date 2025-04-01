@@ -1,0 +1,14 @@
+---
+layout: default
+title: Documentation
+---
+
+<ul class="_projects">
+{% for post in site.projects %}
+  <div class="post_info">
+    <li>
+	    <a href={{ site.url }}{{ site.baseurl }}{{ post.url }}>{{ post.title }}</a>
+    </li>
+    </div>
+  {% endfor %}
+</ul>
