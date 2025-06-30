@@ -1,6 +1,6 @@
 ---
 layout: tagpage
-title: "Tag: JHU"
-tag: JHU
+title: "Tag: jhumove"
+tag: jhumove
 robots: noindex
 ---
